@@ -19,9 +19,9 @@ export default function SidebarLayout({
 }) {
   return (
     <SidebarProvider>
-      <div className="flex">
-        <Sidebar>
-          <SidebarHeader className="p-4 font-semibold text-lg">
+      <div className="flex min-h-screen w-full">
+        <Sidebar className="w-64" variant="floating">
+          <SidebarHeader className="p-4 font-semibold">
             Product Impact Analyzer
           </SidebarHeader>
           <SidebarContent>
@@ -55,10 +55,7 @@ export default function SidebarLayout({
             </SidebarGroup>
           </SidebarContent>
         </Sidebar>
-        <main className="flex-1 p-6">
-          <SidebarTrigger />
-          {children}
-        </main>
+        <main className="flex-1 w-full overflow-x-hidden p-6">{children}</main>
       </div>
     </SidebarProvider>
   );
