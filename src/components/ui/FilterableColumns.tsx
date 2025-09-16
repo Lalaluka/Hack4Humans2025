@@ -38,7 +38,9 @@ const FilterableColumns: React.FC<FilterableColumnsProps> = ({ columns }) => {
               <TrafficSign />
             </div>
             <h2 className="text-xl font-semibold mb-2 text-center">{col.label}</h2>
-            <ToxicityAccordion items={col.data} title="Toxicity Data" />
+            {col.data && col.data.length > 0 && (
+              <ToxicityAccordion items={col.data} title="Toxicity Data" />
+            )}
             <LongtivitySection longtivityData={col.longtivityData} />
           </div>
         ))}

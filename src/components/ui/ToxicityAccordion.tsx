@@ -81,12 +81,11 @@ const ToxicityAccordion: React.FC<ToxicityAccordionProps> = ({ title = "Toxicity
         </span>
       </div>
       {open && (
-        <div style={{ marginTop: "1rem" }}>
+        <div style={{ marginTop: "1rem", background: '#f6faff', borderRadius: 8, padding: '0.5rem 0' }}>
           {items.map((chem, idx) => (
             <ToxicityAccordionRow key={chem.id} chem={chem} />
           ))}
         </div>
-
       )}
     </div>
   );

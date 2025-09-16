@@ -8,7 +8,7 @@ interface LongtivitySectionProps {
 }
 
 const LongtivitySection: React.FC<LongtivitySectionProps> = ({ longtivityData }) => {
-  const [open, setOpen] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
   const efficiencyClass = longtivityData?.energy?.efficiencyClass || 'N/A';
   // Status logic
   let status: 'success' | 'warning' | 'danger' = 'success';
@@ -53,7 +53,7 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({ longtivityData })
         </span>
       </div>
       {open && (
-        <>
+        <div style={{ marginTop: '1rem', background: '#f6faff', borderRadius: 8, padding: '0.5rem 0' }}>
           <InfoRowCard
             title="Energieeffizienz"
             details={
@@ -140,7 +140,7 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({ longtivityData })
               style={{ marginBottom: 10 }}
             />
           )}
-        </>
+        </div>
       )}
   {/* Removed stray closing Card tag after refactor to InfoRowCard */}
     </div>
