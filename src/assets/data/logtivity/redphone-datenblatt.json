@@ -1,0 +1,73 @@
+{
+  "product": {
+    "brand": "APPLE",
+    "model": "A3355",
+    "deviceType": "Tablet",
+    "operatingSystem": "iOS"
+  },
+  "energy": {
+    "efficiencyClass": "G",
+    "userReplaceableBattery": false,
+    "battery": {
+      "lifetimePerCycle_h": 67,
+      "lifetimeCycles": 1000,
+      "capacity_mAh": 7606
+    },
+    "shippedWithProtectiveCover": false,
+    "requiredChargerPower_W": 15,
+    "chargerConnector": "USB-C"
+  },
+  "reliability": {
+    "dropTest": {
+      "freeFall_noDamage": 0,
+      "freeFall_extended_noDamage": null,
+      "class": "E"
+    },
+    "ingressProtection": "IP42",
+    "waterResistance_m": null,
+    "screenScratchResistance_Mohs": 4
+  },
+  "repairability": {
+    "guaranteedUpdates_years": 5,
+    "class": "C",
+    "index": 2.78,
+    "subScores": {
+      "disassemblyDepth": 3.55,
+      "fasteners": 2.80,
+      "tools": 2.80,
+      "spareParts": 1,
+      "softwareUpdates": 1,
+      "repairInformation": 5
+    },
+    "links": {
+      "spareParts": "https://support.apple.com/self-service-repair",
+      "repairInstructions": "https://support.apple.com/self-service-repair",
+      "priceGuidelines": "https://support.apple.com/self-service-repair"
+    }
+  },
+  "warranty": {
+    "duration_months": 24
+  },
+  "market": {
+    "availableSince": "2025-03-12",
+    "eprelId": 2261058,
+    "eprelLink": "https://eprel.ec.europa.eu/qr/2261058"
+  },
+  "supplier": {
+    "name": "Apple Distribution International Limited",
+    "role": "Importeur",
+    "website": null,
+    "customerService": {
+      "name": "Regulatory Compliance",
+      "website": null,
+      "email": "RegulatoryEU@group.apple.com",
+      "phone": "+353214284575",
+      "address": {
+        "street": "Hollyhill Industrial Estate",
+        "postalCode": "T23YK84",
+        "city": "Cork",
+        "country": "Irland"
+      }
+    }
+  }
+}

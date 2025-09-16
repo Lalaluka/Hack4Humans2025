@@ -1,0 +1,73 @@
+{
+  "product": {
+    "brand": "T Phone",
+    "model": "T Phone 3",
+    "deviceType": "Smartphone",
+    "operatingSystem": "Android"
+  },
+  "energy": {
+    "efficiencyClass": "B",
+    "userReplaceableBattery": true,
+    "battery": {
+      "lifetimePerCycle_h": 46,
+      "lifetimeCycles": 1000,
+      "capacity_mAh": 4900
+    },
+    "shippedWithProtectiveCover": false,
+    "requiredChargerPower_W": 25,
+    "chargerConnector": "USB-C"
+  },
+  "reliability": {
+    "dropTest": {
+      "freeFall_noDamage": 350,
+      "freeFall_extended_noDamage": null,
+      "class": "A"
+    },
+    "ingressProtection": "IP54",
+    "waterResistance_m": null,
+    "screenScratchResistance_Mohs": 6
+  },
+  "repairability": {
+    "guaranteedUpdates_years": 5,
+    "class": "A",
+    "index": 4.14,
+    "subScores": {
+      "disassemblyDepth": 3.05,
+      "fasteners": 3.80,
+      "tools": 3.70,
+      "spareParts": 5.0,
+      "softwareUpdates": 5.0,
+      "repairInformation": 5.0
+    },
+    "links": {
+      "spareParts": "https://www.cinno.pl/#/spare/center",
+      "repairInstructions": "https://www.cinno.pl/#/spare/center",
+      "priceGuidelines": "https://www.cinno.pl/#/spare/center"
+    }
+  },
+  "warranty": {
+    "duration_months": 24
+  },
+  "market": {
+    "availableSince": "2025-08-14",
+    "eprelId": 2376973,
+    "eprelLink": "https://eprel.ec.europa.eu/qr/2376973"
+  },
+  "supplier": {
+    "name": "TCCM s.r.o.",
+    "role": "Importeur",
+    "website": "www.tccm.com",
+    "customerService": {
+      "name": "TCCM",
+      "website": "www.tccm.com",
+      "email": "info@tccm.com",
+      "phone": "+420 226 201 664",
+      "address": {
+        "street": "Jindrisska 937/16",
+        "postalCode": "11000",
+        "city": "Prague",
+        "country": "Tschechische Republik"
+      }
+    }
+  }
+}
