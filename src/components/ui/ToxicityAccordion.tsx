@@ -1,58 +1,35 @@
 
 import React, { useState } from "react";
 import { Check, X, ChevronDown, ChevronUp, Info } from "lucide-react";
+import InfoRowCard from './InfoRowCard';
 
 // Row component with its own state
 function ToxicityAccordionRow({ chem }: { chem: ToxicityAccordionItem }) {
   const [showInfo, setShowInfo] = React.useState(false);
+  const status = chem.exceeded ? 'danger' : 'success';
   return (
-    <div
-      style={{
-        borderRadius: 4,
-        padding: "0.8rem 1.2rem",
-        background: chem.exceeded ? "#fff6f6" : "#f6fff6",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        color: "#000",
-        marginBottom: 10,
-        border: "1px solid #eee"
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <h3 style={{ margin: 0, fontSize: 16, fontWeight: 600, color: "#000" }}>
-          {chem.name} <span style={{ fontWeight: 400, color: "#000" }}>({chem.symbol})</span>
-        </h3>
-        <button
-          style={{ background: "none", border: "none", cursor: "pointer", padding: 0, marginLeft: 8 }}
-          aria-label="Show info"
-          onClick={() => setShowInfo((v) => !v)}
-        >
-          <Info size={20} color="#555" />
-        </button>
-      </div>
-      {showInfo && (
-        <p style={{ margin: "6px 0", fontSize: 13, color: "#000" }}>{chem.description}</p>
-      )}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <div>
-          <span style={{ fontSize: 12, color: "#000" }}>
-            <strong style={{ color: "#000" }}>Regulation:</strong> {chem.regulation}
-          </span>
-          <br />
-          <span style={{ fontSize: 12, color: "#000" }}>
-            <strong style={{ color: "#000" }}>Threshold:</strong> {chem.threshold}
-          </span>
-        </div>
-        <div style={{ marginLeft: 12 }}>
-          {chem.exceeded ? (
-            <X color="#d32f2f" size={24} strokeWidth={3} />
-          ) : (
-            <Check color="#388e3c" size={24} strokeWidth={3} />
+    <InfoRowCard
+      title={`${chem.name} (${chem.symbol})`}
+      details={
+        <>
+          <span style={{ fontSize: 12 }}><strong>Regulation:</strong> {chem.regulation}</span><br />
+          <span style={{ fontSize: 12 }}><strong>Threshold:</strong> {chem.threshold}</span>
+          {showInfo && (
+            <p style={{ margin: "6px 0", fontSize: 13 }}>{chem.description}</p>
           )}
-        </div>
-      </div>
-    </div>
+        </>
+      }
+      status={status}
+      iconStatus={status}
+    >
+      <button
+        style={{ background: "none", border: "none", cursor: "pointer", padding: 0, marginLeft: 8 }}
+        aria-label="Show info"
+        onClick={() => setShowInfo((v) => !v)}
+      >
+        <Info size={20} color="#555" />
+      </button>
+    </InfoRowCard>
   );
 }
 

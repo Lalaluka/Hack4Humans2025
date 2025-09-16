@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import FilterableColumns from '../components/ui/FilterableColumns';
-import hazerdousData from '../assets/data/hazerdous_materials_tPhone.json';
-import hazerdousDataRed from '../assets/data/hazerdous_materials_redPhone.json';
+import hazerdousData from '../assets/data/hazard/hazerdous_materials_tPhone.json';
+import hazerdousDataRed from '../assets/data/hazard/hazerdous_materials_redPhone.json';
+import longtivityTPhone from '../assets/data/logtivity/t-phone-datenblatt.json';
+import longtivityRedPhone from '../assets/data/logtivity/redphone-datenblatt.json';
 
 const columns = [
   {
@@ -10,12 +12,14 @@ const columns = [
     label: 'tPhone',
     image: '/tphone.jpg',
     data: hazerdousData,
+    longtivityData: longtivityTPhone,
   },
   {
     key: 'redphone',
     label: 'redPhone',
     image: '/vodafone.png',
     data: hazerdousDataRed,
+    longtivityData: longtivityRedPhone,
   },
   // Add more columns here as needed
 ];

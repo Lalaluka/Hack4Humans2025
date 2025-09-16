@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ColumnFilterDropdown from './ColumnFilterDropdown';
 import ToxicityAccordion from './ToxicityAccordion';
 import TrafficSign from './TrafficSign';
+import LongtivitySection from './LongtivitySection';
 import type { ToxicityAccordionItem } from './ToxicityAccordion';
 
 export type FilterableColumn = {
@@ -9,6 +10,7 @@ export type FilterableColumn = {
   label: string;
   image: string;
   data: ToxicityAccordionItem[];
+  longtivityData?: any;
 };
 
 export type FilterableColumnsProps = {
@@ -37,6 +39,7 @@ const FilterableColumns: React.FC<FilterableColumnsProps> = ({ columns }) => {
             </div>
             <h2 className="text-xl font-semibold mb-2 text-center">{col.label}</h2>
             <ToxicityAccordion items={col.data} title="Toxicity Data" />
+            <LongtivitySection longtivityData={col.longtivityData} />
           </div>
         ))}
       </div>
