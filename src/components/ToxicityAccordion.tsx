@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Check, X, ChevronDown, ChevronUp, Info } from "lucide-react";
-import InfoRowCard from './InfoRowCard';
+import InfoRowCard from "./ui/info-row-card";
 
 // Helper to convert "0.1%" string to numeric value
 function parsePercent(value: string) {
@@ -12,7 +12,9 @@ function getToxicityGradientColor(percentage: number) {
   // Clamp percentage to 0-150 for visualization
   const p = Math.min(Math.max(percentage, 0), 150);
 
-  let r: number, g: number, b = 0;
+  let r: number,
+    g: number,
+    b = 0;
 
   if (p < 100) {
     // Green to yellow
@@ -117,8 +119,8 @@ export type ToxicityAccordionItem = {
   name: string;
   symbol: string;
   regulation: string;
-  threshold: string;  // e.g., "0.1%"
-  amount?: string;    // e.g., "0.05%"
+  threshold: string; // e.g., "0.1%"
+  amount?: string; // e.g., "0.05%"
   description: string;
   exceeded: boolean;
 };
@@ -130,12 +132,24 @@ export type ToxicityAccordionProps = {
 };
 
 // Accordion component
-const ToxicityAccordion: React.FC<ToxicityAccordionProps> = ({ title = "Toxicity Data", items, width = 500 }) => {
+const ToxicityAccordion: React.FC<ToxicityAccordionProps> = ({
+  title = "Toxicity Data",
+  items,
+  width = 500,
+}) => {
   const [open, setOpen] = useState(false);
   const allSafe = items.every((chem) => !chem.exceeded);
 
   return (
-    <div style={{ marginTop: "2rem", color: "#000", width, marginLeft: "auto", marginRight: "auto" }}>
+    <div
+      style={{
+        marginTop: "2rem",
+        color: "#000",
+        width,
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    >
       <div
         style={{
           display: "flex",
@@ -162,7 +176,13 @@ const ToxicityAccordion: React.FC<ToxicityAccordionProps> = ({ title = "Toxicity
         </span>
       </div>
       {open && (
-        <div style={{ marginTop: "1rem", background: '#f6faff', borderRadius: 8, padding: '0.5rem 0' }}>
+        <div
+          style={{
+            marginTop: "1rem",
+            borderRadius: 8,
+            padding: "0.5rem 0",
+          }}
+        >
           {items.map((chem) => (
             <ToxicityAccordionRow key={chem.id} chem={chem} />
           ))}

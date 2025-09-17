@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import FilterableColumns from '../components/ui/FilterableColumns';
-import hazerdousData from '../assets/data/hazard/hazerdous_materials_tPhone.json';
-import hazerdousDataRed from '../assets/data/hazard/hazerdous_materials_redPhone.json';
-import longtivityTPhone from '../assets/data/logtivity/t-phone-datenblatt.json';
-import longtivityRedPhone from '../assets/data/logtivity/redphone-datenblatt.json';
+import FilterableColumns from '../components/FilterableColumns';
+import hazerdousData from '../assets/data/hazard/tPhone.json';
+import hazerdousDataRed from '../assets/data/hazard/redPhone.json';
+import longtivityTPhone from '../assets/data/longtivity/t-phone-datenblatt.json';
+import longtivityRedPhone from '../assets/data/longtivity/redphone-datenblatt.json';
 
 const columns = [
   {
@@ -21,11 +21,9 @@ const columns = [
     data: hazerdousDataRed,
     longtivityData: longtivityRedPhone,
   },
-  // Add more columns here as needed
 ];
 ---
 
 <Layout>
-  <h1 class="text-3xl font-bold mb-4 mt-16">Vergleich</h1>
   <FilterableColumns columns={columns} client:load />
 </Layout>
