@@ -1,0 +1,73 @@
+{
+  "product": {
+    "brand": "Fairphone",
+    "model": "The Fairphone (Gen.6) Model: FP6",
+    "deviceType": "Smartphone",
+    "operatingSystem": "Android"
+  },
+  "energy": {
+    "efficiencyClass": "A",
+    "userReplaceableBattery": true,
+    "battery": {
+      "lifetimePerCycle_h": 53,
+      "lifetimeCycles": 1000,
+      "capacity_mAh": 4315
+    },
+    "shippedWithProtectiveCover": false,
+    "requiredChargerPower_W": 27,
+    "chargerConnector": "USB-C"
+  },
+  "reliability": {
+    "dropTest": {
+      "freeFall_noDamage": 300,
+      "freeFall_extended_noDamage": null,
+      "class": "A"
+    },
+    "ingressProtection": "IP55",
+    "waterResistance_m": null,
+    "screenScratchResistance_Mohs": 6
+  },
+  "repairability": {
+    "guaranteedUpdates_years": 8,
+    "class": "A",
+    "index": 4.77,
+    "subScores": {
+      "disassemblyDepth": 5.0,
+      "fasteners": 4.5,
+      "tools": 5.0,
+      "spareParts": 4,
+      "softwareUpdates": 5,
+      "repairInformation": 5
+    },
+    "links": {
+      "spareParts": "https://shop.fairphone.com/shop/category/spare-parts-4?category=4",
+      "repairInstructions": "https://www.fairphone.com/tutorials",
+      "priceGuidelines": "https://shop.fairphone.com/shop/category/spare-parts-4?category=4"
+    }
+  },
+  "warranty": {
+    "duration_months": 36
+  },
+  "market": {
+    "availableSince": "2025-06-25",
+    "eprelId": 2372958,
+    "eprelLink": "https://eprel.ec.europa.eu/qr/2372958"
+  },
+  "supplier": {
+    "name": "FairPhone B.V.",
+    "role": "Hersteller",
+    "website": "https://www.fairphone.com/",
+    "customerService": {
+      "name": "Ana Hilario",
+      "website": "https://www.fairphone.com",
+      "email": "support@fairphone.com",
+      "phone": "31 852250203",
+      "address": {
+        "street": "Van Diemenstraat Floor 3 200",
+        "postalCode": "1013CP",
+        "city": "Amsterdam",
+        "country": "Niederlande"
+      }
+    }
+  }
+}
