@@ -16,8 +16,8 @@ type Props = {
 export default function BarcodeScanner({
   onDetected,
   pauseOnDetect = true,
-  title = "Produktscanner",
-  description = "Scannen Sie einen Barcode, um das Produkt zu analysieren.",
+  title = "Product Scanner",
+  description = "Scan a barcode to analyze the product.",
 }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const controlsRef = useRef<
@@ -145,36 +145,19 @@ export default function BarcodeScanner({
             <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
             <p className="mt-1 text-sm text-muted-foreground">{description}</p>
           </div>
-          <span
-            className={
-              "inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-medium " +
-              (isActive
-                ? "border-green-500/30 bg-green-500/10 text-green-700 dark:text-green-400"
-                : "border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-400")
-            }
-          >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              className={isActive ? "fill-current" : "fill-current"}
-            >
-              <circle cx="12" cy="12" r="6" />
-            </svg>
-            {isActive ? "Scannen" : "Pausiert"}
-          </span>
         </div>
 
         {/* Body */}
         <div className="space-y-4 p-4 md:p-6">
           {/* Video surface */}
           <div className="relative w-full overflow-hidden rounded-lg bg-muted">
-            <div className="w-full max-h-[440px]">
+            {/* Fixed height so gray area equals camera area even before start */}
+            <div className="w-full h-[440px] md:h-[500px] ">
               <video
                 ref={videoRef}
                 playsInline
                 muted
-                className="h-full w-full object-contain"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
@@ -188,7 +171,7 @@ export default function BarcodeScanner({
               onClick={restart}
               className="inline-flex items-center justify-center rounded-md border bg-primary px-3 py-2 text-sm font-medium text-primary-foreground shadow-sm hover:opacity-90 disabled:opacity-50"
             >
-              {isActive ? "Scannen starten" : "Scannen starten"}
+              Start scanning
             </button>
 
             <button
@@ -196,13 +179,13 @@ export default function BarcodeScanner({
               onClick={stop}
               className="inline-flex items-center justify-center rounded-md border px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
             >
-              Stopp
+              Stop
             </button>
 
             <div className="ml-auto text-xs text-muted-foreground">
               {devices.length > 0 ? (
                 <span>
-                  Kamera:{" "}
+                  Camera:{" "}
                   {devices[deviceIndex]?.label || `Device ${deviceIndex + 1}`}
                 </span>
               ) : (
@@ -216,7 +199,7 @@ export default function BarcodeScanner({
             <div className="flex items-start gap-3 rounded-md border border-green-500/30 bg-green-500/10 p-3 text-sm text-green-700 dark:text-green-400">
               <div className="mt-0.5 h-2.5 w-2.5 rounded-full bg-green-500" />
               <div className="flex-1">
-                <div className="font-medium">Erkannt</div>
+                <div className="font-medium">Detected</div>
                 <div className="select-all break-all font-mono text-sm">
                   {result}
                 </div>
@@ -226,13 +209,13 @@ export default function BarcodeScanner({
                   onClick={copyResult}
                   className="inline-flex items-center justify-center rounded-md border px-2.5 py-1.5 text-xs font-medium hover:bg-accent hover:text-accent-foreground"
                 >
-                  Kopieren
+                  Copy
                 </button>
                 <button
                   onClick={clearResult}
                   className="inline-flex items-center justify-center rounded-md border px-2.5 py-1.5 text-xs font-medium hover:bg-accent hover:text-accent-foreground"
                 >
-                  Löschen
+                  Clear
                 </button>
               </div>
             </div>
@@ -243,7 +226,7 @@ export default function BarcodeScanner({
               className="rounded-md border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-700 dark:text-red-400"
               role="alert"
             >
-              <div className="font-medium">Kamerafehler</div>
+              <div className="font-medium">Camera error</div>
               <div className="mt-1 text-sm">{error}</div>
             </div>
           )}
