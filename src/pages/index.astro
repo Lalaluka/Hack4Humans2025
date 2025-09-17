@@ -1,0 +1,16 @@
+---
+import QuestionFlow from "/src/components/Questionnaire";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="color-scheme" content="light dark" />
+    <title>Questions</title>
+  </head>
+  <body class="min-h-screen antialiased">
+    <!-- No Sidebar / No Layout -->
+    <QuestionFlow client:only="react" />
+  </body>
+</html>
