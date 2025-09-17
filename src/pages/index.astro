@@ -3,152 +3,31 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <!-- Top Ribbon/Header -->
-  <header class="top-ribbon">
-    <div class="ribbon-content">
-  <!-- Only text content remains -->
-      <h1>EcoScan</h1>
-      <p class="tagline">Check the environmental & social impact of electronics</p>
-    </div>
-  </header>
 
-  <!-- Background Animation -->
-  <div class="background-animation">
-    <svg viewBox="0 0 400 700" class="pixel-phone" style="transform: rotate(-12deg);">
-      <!-- Phone body, more edged -->
+
+  <!-- Background illustration -->
+  <div class="pointer-events-none absolute inset-0 -z-10 flex items-start justify-center pt-15">
+    <svg viewBox="0 0 400 700" class="w-[28vw] max-w-[420px] min-w-[260px] h-[50vw] max-h-[800px] min-h-[400px] opacity-15 rotate-[-12deg]">
       <rect x="60" y="60" width="280" height="580" rx="8" fill="#222" stroke="#555" stroke-width="14" />
-      <!-- Screen -->
       <rect x="90" y="110" width="220" height="480" rx="4" fill="#fff" />
-      <!-- Pixelated tree (simple blocky style) -->
-  <rect x="190" y="320" width="20" height="80" fill="#4B8B3B" /> <!-- trunk -->
-  <rect x="160" y="260" width="80" height="60" fill="#3ECF4C" /> <!-- leaves -->
-  <rect x="175" y="240" width="50" height="30" fill="#2E7D32" /> <!-- top leaves -->
+      <rect x="190" y="320" width="20" height="80" fill="#4B8B3B" />
+      <rect x="160" y="260" width="80" height="60" fill="#3ECF4C" />
+      <rect x="175" y="240" width="50" height="30" fill="#2E7D32" />
     </svg>
   </div>
 
-  <!-- removed stray CSS -->
-  <main class="center-content">
-    <h2>Welcome to EcoScan</h2>
-    <p>Scan or enter an EAN to discover the environmental and social impact of your electronic product.</p>
-    <div class="input-section">
-      <input type="text" placeholder="Enter EAN..." class="ean-input" />
-      <button class="scan-btn">Scan EAN</button>
+  <main class="container relative mx-auto px-4 pt-20">
+    <div class="mx-auto mt-16 w-full max-w-xl">
+      <div class="rounded-xl border bg-card text-card-foreground shadow">
+        <div class="p-6">
+          <h2 class="text-2xl font-semibold tracking-tight">Welcome to EcoScan</h2>
+          <p class="mt-2 text-sm text-muted-foreground">Scan or enter an EAN to discover the environmental and social impact of your electronic product.</p>
+          <div class="mt-6 flex gap-2">
+            <input type="text" placeholder="Enter EAN..." class="flex-1 h-10 rounded-md border bg-background px-3 py-2 text-sm shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
+            <button class="h-10 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">Scan EAN</button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
-
-  <style>
-    .ribbon-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      gap: 0.2rem;
-    }
-    .tree-icon {
-      color: var(--ribbon-icon);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .top-ribbon h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-    }
-    .tagline {
-      margin: 0.5rem 0 0 0;
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
-    :root {
-      --ribbon-bg: #fff;
-      --ribbon-text: #111;
-      --ribbon-icon: #111;
-    }
-    html.dark :root {
-      --ribbon-bg: #111;
-      --ribbon-text: #fff;
-      --ribbon-icon: #fff;
-    }
-    .background-animation {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      min-height: 100vh;
-      height: 100%;
-      z-index: 0;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      pointer-events: none;
-    }
-    .pixel-phone {
-      width: 28vw;
-      max-width: 420px;
-      min-width: 260px;
-      height: 50vw;
-      max-height: 800px;
-      min-height: 400px;
-      opacity: 0.18;
-      animation: floatPhone 6s ease-in-out infinite;
-      display: block;
-      margin: 0 auto;
-    }
-    @keyframes floatPhone {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-30px); }
-    }
-    .center-content {
-      position: relative;
-      z-index: 1;
-      margin-top: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: rgba(255,255,255,0.85);
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(46,125,50,0.08);
-      padding: 2.5rem 2rem;
-      max-width: 520px;
-      min-height: 60vh;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .center-content h2 {
-      margin-top: 0;
-      font-size: 2rem;
-      color: #2E7D32;
-    }
-    .center-content p {
-      font-size: 1.1rem;
-      color: #333;
-      margin-bottom: 2rem;
-    }
-    .input-section {
-      display: flex;
-      gap: 0.5rem;
-    }
-    .ean-input {
-      padding: 0.7rem 1rem;
-      border-radius: 8px;
-      border: 1px solid #b2dfdb;
-      font-size: 1rem;
-      outline: none;
-      width: 180px;
-    }
-    .scan-btn {
-      background: #2E7D32;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 0.7rem 1.2rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .scan-btn:hover {
-      background: #388E3C;
-    }
-  </style>
 </Layout>

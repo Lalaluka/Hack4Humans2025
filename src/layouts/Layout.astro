@@ -30,15 +30,15 @@ import '../styles/global.css';
 <html lang="de">
   <head>
     <meta name="color-scheme" content="light dark" />
-    <title>Astro Basics</title>
+    <title>HackathonXAI2025</title>
   </head>
 
   <body class="min-h-screen antialiased bg-background text-foreground">
 <SidebarLayout client:only="react">
   <div class="flex flex-col w-full">
     <!-- Extra Header nur für ModeToggle -->
-    <header class="sticky top-0 z-40 w-full   backdrop-blur py-3 mb-4">
-      <div class="flex items-center justify-end gap-2">
+    <header class="sticky top-0 z-40 w-full backdrop-blur py-3 mb-4 pointer-events-none border-b bg-background/80">
+      <div class="flex items-center justify-end gap-2 pointer-events-auto">
         <ModeToggle client:only="react" />
       </div>
     </header>
