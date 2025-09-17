@@ -3,22 +3,22 @@
     {
       "topic": "Own Workforce",
       "description": "Impacts and issues related to the company’s own employees.",
-      "esrs_extract": ""
+      "esrs_extract": "Deutsche Telekom commits to reporting under ESRS S1, covering areas like working conditions (health & safety, social dialogue), equal treatment and opportunities. They also set targets (e.g. increase share of women in management to 30 % by end of 2025). Employee satisfaction metrics are used in management incentives. :contentReference[oaicite:1]{index=1}"
     },
     {
       "topic": "Workers in the Value Chain",
       "description": "Social impacts affecting workers in suppliers and partners outside the company.",
-      "esrs_extract": ""
+      "esrs_extract": "Deutsche Telekom includes upstream and downstream value chain in its materiality assessment and sustainability statement. It uses policies for labor standards, human rights due diligence, and addresses working conditions among its suppliers via ESRS S2. Material impacts, risks, and opportunities in the value chain are identified and actions planned. :contentReference[oaicite:2]{index=2}"
     },
     {
       "topic": "Affected Communities",
       "description": "Effects on people and communities living near or impacted by operations.",
-      "esrs_extract": ""
+      "esrs_extract": "While ESRS 2 mainly focuses on general disclosures (strategy, governance, value chain, due diligence etc.), Deutsche Telekom’s report does **not** have a clearly separate section labelled 'Affected Communities' in ESRS 2. Impacts on communities tend to be covered indirectly in the processes for risk assessment, stakeholder engagement, and materiality of societal impacts. :contentReference[oaicite:3]{index=3}"
     },
     {
       "topic": "Consumers & End-Users",
       "description": "How products or services affect the people who use them or depend on them.",
-      "esrs_extract": ""
+      "esrs_extract": "Under ESRS S4, Deutsche Telekom addresses how its products and services affect consumers and end-users. This includes measuring customer satisfaction, defining targets for social commitment (e.g. ‘Digital Society’ initiative benefiting >80 million people between 2024-2027), and integrating consumer concerns into strategy and governance. :contentReference[oaicite:4]{index=4}"
     }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "clusters": [
+    {
+      "topic": "Own Workforce",
+      "description": "Impacts and issues related to the company’s own employees.",
+      "esrs_extract": "Recruiting & Managing a Global & Skilled Workforce: TC‑SC‑30 a .1 Percentage of employees that are (1) foreign nationals and (2) located offshore. Page4‑65. Employee Health and Safety: TC‑SC‑320 a .1 Description of efforts to assess, monitor, and reduce exposure of employees to human health hazards. Pages3‑44. Employee Diversity & Inclusion: TC‑HW‑3 a .1 Percentage of gender and racial/ethnic group representation for (1) management, (2) technical staff, and (3) all other employees. Pages4‑65. Employee Health and Safety: TC‑SC‑320 a .2 Total amount of monetary losses as a result of legal proceedings associated with employee health and safety violations. Annual Business Report (2024). Pages46‑350."
+    },
+    {
+      "topic": "Workers in the Value Chain",
+      "description": "Impacts and issues related to workers in the company’s supply chain.",
+      "esrs_extract": "Supply Chain Management: TC‑HW‑43 a .1 Percentage of Tier supplier facilities audited in the RBA Validated Audit Process (VAP) or equivalent, by (a) all facilities and (b) high‑risk facilities. Pages8,7. Supply Chain Management: TC‑HW‑43 a .2 Tier suppliers’ (1) non‑compliance rate with the RBA Validated Audit Process (VAP) or equivalent and (2) associated corrective action rate for (a) priority non‑conformances and (b) other non‑conformances. Pages8,7. Materials Sourcing: TC‑HW‑44 a .1 Description of risk management associated with the use of critical materials. Pages6‑67."
+    },
+    {
+      "topic": "Affected Communities",
+      "description": "Effects on people and communities living near or impacted by operations.",
+      "esrs_extract": ""
+    },
+    {
+      "topic": "Consumers & End-Users",
+      "description": "Impacts and issues related to consumers and end‑users of the company’s products.",
+      "esrs_extract": "Product Lifecycle Management: TC‑SC‑410 a .1 Percentage of products by revenue that contain IEC2474 declarable substances. Samsung Electronics complies with EU RoHS, REACH, TSCA, etc. Pages1 and3. Product Lifecycle Management: TC‑HW‑410a.2 Percentage of eligible products that meet the EPEAT registration criteria or equivalent: Computers5.5%, Mobile phones5.3%, Tablets6.7%, Displays2.0%. Product Lifecycle Management: TC‑HW‑410a.3 Percentage of eligible products that meet the ENERGY STAR® criteria: Audio devices0.6%, Computers00%, Tablets1.6%. Product Safety: TC‑H0W‑2 a .1 Description of the approach to identifying and addressing data security risks in products. Samsung Electronics performs a control tower role through the Global Privacy Team Head as Chief Privacy Officer and Information Security Center Head as Chief Information Security Officer, who oversee the Privacy Steering Committee and the Security Council. Product Lifecyle Management: TC‑HW‑410a.4 Weight of end‑of‑life products and e‑waste recovered, percentage recycled. Samsung Electronics selected an e‑waste collection system as a key initiative; the system will expand to all global sales countries by 2030. Pages6‑17,9, and3."
+    }
+  ]
+}
