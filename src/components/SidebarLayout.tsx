@@ -107,7 +107,7 @@ export default function SidebarLayout({
               <img
                 src={logoSrc}
                 alt={`${appName} Logo`}
-                className="h-8 w-8 rounded-sm object-contain"
+                className="h-8 w-8 mt-2 rounded-sm object-contain"
                 onError={(e) => {
                   // Fallback, falls Logo-Pfad nicht passt
                   (e.currentTarget as HTMLImageElement).style.display = "none";
@@ -129,7 +129,9 @@ export default function SidebarLayout({
           <SidebarContent>
             {/* Hauptnavigation */}
             <SidebarGroup className="px-2">
-              <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+              <SidebarGroupLabel className="text-gray-500">
+                Navigation
+              </SidebarGroupLabel>
               <SidebarMenu>
                 <SidebarMenuItem>
                   <SidebarMenuButton
