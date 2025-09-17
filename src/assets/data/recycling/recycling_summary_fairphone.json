@@ -1,0 +1,87 @@
+{
+  "material_type_summary": [
+    {
+      "material_type": "metal",
+      "total_weight_mg": 41455.83250756572,
+      "recyclable_weight_mg": 41385.85469108072,
+      "partially_recyclable_weight_mg": 33.49140458899999,
+      "burnable_weight_mg": 0,
+      "non_recyclable_weight_mg": 36.48641189599999,
+      "precentages_recyclable": 99.83119910455972,
+      "precentages_partially_recyclable": 0.08078816070787574,
+      "precentages_burnable": 0.0,
+      "precentages_non_recyclable": 0.0880127347324196
+    },
+    {
+      "material_type": "plastic",
+      "total_weight_mg": 43447.50554299682,
+      "recyclable_weight_mg": 20077.92645711044,
+      "partially_recyclable_weight_mg": 11492.561194630558,
+      "burnable_weight_mg": 3739.4668711002764,
+      "non_recyclable_weight_mg": 8136.489420155555,
+      "precentages_recyclable": 46.211919893170354,
+      "precentages_partially_recyclable": 26.45160188369666,
+      "precentages_burnable": 8.606862061159298,
+      "precentages_non_recyclable": 18.72717275357377
+    },
+    {
+      "material_type": "rubber",
+      "total_weight_mg": 883.1239237477705,
+      "recyclable_weight_mg": 42.118125,
+      "partially_recyclable_weight_mg": 230.59374999999997,
+      "burnable_weight_mg": 306.3724204544502,
+      "non_recyclable_weight_mg": 304.03962829332073,
+      "precentages_recyclable": 4.769220249550093,
+      "precentages_partially_recyclable": 26.11114293240005,
+      "precentages_burnable": 34.69189455929103,
+      "precentages_non_recyclable": 34.42774225875888
+    },
+    {
+      "material_type": "ceramic",
+      "total_weight_mg": 11069.200108344035,
+      "recyclable_weight_mg": 5972.005610853183,
+      "partially_recyclable_weight_mg": 600.5911386339167,
+      "burnable_weight_mg": 38.220699999999994,
+      "non_recyclable_weight_mg": 4458.382658856937,
+      "precentages_recyclable": 53.95155523795658,
+      "precentages_partially_recyclable": 5.425786260573491,
+      "precentages_burnable": 0.34528872570646707,
+      "precentages_non_recyclable": 40.27736977576347
+    },
+    {
+      "material_type": "glass",
+      "total_weight_mg": 15914.698149303385,
+      "recyclable_weight_mg": 12568.092552963502,
+      "partially_recyclable_weight_mg": 885.6532445736666,
+      "burnable_weight_mg": 2.032662,
+      "non_recyclable_weight_mg": 2457.909033766215,
+      "precentages_recyclable": 78.9716049594923,
+      "precentages_partially_recyclable": 5.565001838331651,
+      "precentages_burnable": 0.012772230933509559,
+      "precentages_non_recyclable": 15.444270514636196
+    },
+    {
+      "material_type": "other",
+      "total_weight_mg": 37618.062950122774,
+      "recyclable_weight_mg": 5145.148184080156,
+      "partially_recyclable_weight_mg": 8841.712393790718,
+      "burnable_weight_mg": 2498.456369414061,
+      "non_recyclable_weight_mg": 21131.820002837838,
+      "precentages_recyclable": 13.6773341862446,
+      "precentages_partially_recyclable": 23.503901318666546,
+      "precentages_burnable": 6.641640141670045,
+      "precentages_non_recyclable": 56.17466277000015
+    }
+  ],
+  "total_summary": {
+    "total_phone_weight_mg": 150388.4231820805,
+    "total_recyclable_weight_mg": 85191.145621088,
+    "total_partially_recyclable_weight_mg": 22084.60312621786,
+    "total_burnable_weight_mg": 6584.5490229687875,
+    "total_non_recyclable_weight_mg": 36525.127155805865,
+    "percentage_recyclable": 56.647409300876916,
+    "percentage_partially_recyclable": 14.685042012495378,
+    "percentage_burnable": 4.378361634257343,
+    "percentage_non_recyclable": 24.287193377633614
+  }
+}
