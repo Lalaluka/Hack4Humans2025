@@ -152,7 +152,7 @@ export default function BarcodeScanner({
           {/* Video surface */}
           <div className="relative w-full overflow-hidden rounded-lg bg-muted">
             {/* Fixed height so gray area equals camera area even before start */}
-            <div className="w-full h-[430px] md:h-[484px] ">
+            <div className="w-full h-[430px] md:h-[490px] ">
               <video
                 ref={videoRef}
                 playsInline
