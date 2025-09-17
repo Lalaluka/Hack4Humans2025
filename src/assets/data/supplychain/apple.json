@@ -1,0 +1,79 @@
+{
+    "name": "Apple Inc.",
+    "BAFA_AVAILABLE": true,
+    "identified_internal_risks": [
+        {
+            "id": 1,
+            "name": "Disregard for occupational safety and work-related health hazards",
+            "appropriate_mitigation_measures": 2
+        },
+        {
+            "id": 2,
+            "name": "Prohibited production and/or use of substances within the scope of the Stockholm Convention (POPs) as well as environmentally unsound handling of waste containing POPs",
+            "appropriate_mitigation_measures": 2
+        },
+        {
+            "id": 3,
+            "name": "Prohibited import/export of hazardous waste within the meaning of the Basel Convention",
+            "appropriate_mitigation_measures": 2
+        }
+    ],
+    "identified_direct_supplier_risks": [
+        {
+            "id": 1,
+            "name": "Forced Labour",
+            "appropriate_mitigation_measures": 1
+        },
+        {
+            "id": 2,
+            "name": "Disregard for occupational safety and work-related health hazards",
+            "appropriate_mitigation_measures": 2
+        },
+        {
+            "id": 3,
+            "name": "Prohibited production and/or use of substances within the scope of the Stockholm Convention (POPs) as well as environmentally unsound handling of waste containing POPs",
+            "appropriate_mitigation_measures": 2
+        },
+        {
+            "id": 4,
+            "name": "Prohibited import/export of hazardous waste within the meaning of the Basel Convention",
+            "appropriate_mitigation_measures": 1
+        }
+    ],
+    "identified_indirect_supplier_risks": [
+        {
+            "id": 1,
+            "name": "Forced Labour",
+            "appropriate_mitigation_measures": 2
+        },
+        {
+            "id": 2,
+            "name": "Disregard for occupational safety and work-related health hazards",
+            "appropriate_mitigation_measures": 2
+        },
+        {
+            "id": 3,
+            "name": "Prohibited production and/or use of substances within the scope of the Stockholm Convention (POPs) as well as environmentally unsound handling of waste containing POPs",
+            "appropriate_mitigation_measures": 2
+        },
+        {
+            "id": 4,
+            "name": "Prohibited import/export of hazardous waste within the meaning of the Basel Convention",
+            "appropriate_mitigation_measures": 1
+        }
+    ],
+    "recent_event-related_evaluation": [
+        {
+            "id": 1,
+            "name": "External Hint, of a supplier paying wages below the legal minimum wage in their country of operation.",
+            "outcome": "No findings"
+        }
+    ],
+    "recent_violations": [
+        {
+            "id": 1,
+            "name": "Low Wages",
+            "description": "A direct supplier was found to be paying wages below the legal minimum wage in their country of operation."
+        }
+    ]
+}
