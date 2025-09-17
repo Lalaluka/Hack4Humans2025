@@ -16,8 +16,8 @@ type Props = {
 export default function BarcodeScanner({
   onDetected,
   pauseOnDetect = true,
-  title = "Product Scanner",
-  description = "Scan a barcode to analyze the product.",
+  title = "Think about your Products",
+  description = "Scan or enter an EAN to discover the environmental and social impact of your electronic product..",
 }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const controlsRef = useRef<
@@ -152,7 +152,7 @@ export default function BarcodeScanner({
           {/* Video surface */}
           <div className="relative w-full overflow-hidden rounded-lg bg-muted">
             {/* Fixed height so gray area equals camera area even before start */}
-            <div className="w-full h-[440px] md:h-[500px] ">
+            <div className="w-full h-[430px] md:h-[484px] ">
               <video
                 ref={videoRef}
                 playsInline
@@ -165,33 +165,15 @@ export default function BarcodeScanner({
           <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-background/60 to-transparent" />
 
           {/* Controls */}
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              type="button"
-              onClick={restart}
-              className="inline-flex items-center justify-center rounded-md border bg-primary px-3 py-2 text-sm font-medium text-primary-foreground shadow-sm hover:opacity-90 disabled:opacity-50"
-            >
-              Start scanning
+          <div class="mt-6 flex gap-2">
+            <input
+              type="text"
+              placeholder="Enter EAN..."
+              class="flex-1 h-10 rounded-md border bg-background px-3 py-2 text-sm shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            />
+            <button class="h-10 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">
+              Scan EAN
             </button>
-
-            <button
-              type="button"
-              onClick={stop}
-              className="inline-flex items-center justify-center rounded-md border px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
-            >
-              Stop
-            </button>
-
-            <div className="ml-auto text-xs text-muted-foreground">
-              {devices.length > 0 ? (
-                <span>
-                  Camera:{" "}
-                  {devices[deviceIndex]?.label || `Device ${deviceIndex + 1}`}
-                </span>
-              ) : (
-                <span>No camera found</span>
-              )}
-            </div>
           </div>
 
           {/* Result / Error */}
