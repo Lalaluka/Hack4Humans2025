@@ -42,11 +42,18 @@ const FilterableColumns: React.FC<FilterableColumnsProps> = ({ columns }) => {
           setOpen={setOpen}
         />
       </div>
-      <div style={{ display: "flex", gap: "2rem", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "2rem",
+          alignItems: "stretch",
+          width: "100%",
+        }}
+      >
         {columns.map(
           (col, idx) =>
             visible[idx] && (
-              <div key={col.key}>
+              <div key={col.key} style={{ flex: 1, minWidth: 0 }}>
                 <div
                   style={{
                     display: "flex",

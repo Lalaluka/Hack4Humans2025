@@ -21,9 +21,7 @@ export default function SidebarLayout({
     <SidebarProvider>
       <div className="flex min-h-screen w-full">
         <Sidebar className="w-64" variant="floating">
-          <SidebarHeader className="p-4 font-semibold">
-            Product Impact Analyzer
-          </SidebarHeader>
+          <SidebarHeader className="p-4 font-semibold">Ecomat</SidebarHeader>
           <SidebarContent>
             <SidebarGroup>
               <SidebarMenu>

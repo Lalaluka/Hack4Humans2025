@@ -6,19 +6,46 @@ import hazerdousDataRed from '../assets/data/hazard/redPhone.json';
 import longtivityTPhone from '../assets/data/longtivity/t-phone-datenblatt.json';
 import longtivityRedPhone from '../assets/data/longtivity/redphone-datenblatt.json';
 
+// helper: "12.3%" -> 12.3
+const toNum = (s) => {
+  if (typeof s !== 'string') return 0;
+  const n = parseFloat(s.replace('%','').trim());
+  return Number.isFinite(n) ? n : 0;
+};
+
+// map hazardous items to include computed thresholdPct and colors for the progress bar/labels
+const mapHazardItems = (arr) =>
+  arr.map((i) => {
+    const amount = toNum(i.amount);
+    const threshold = toNum(i.threshold);
+    const pct = threshold > 0 ? Math.round((amount / threshold) * 100) : 0;
+
+    // levels: ok <= 80%, warning 81–100%, danger >100%
+    const level = pct <= 80 ? 'ok' : pct <= 100 ? 'warning' : 'danger';
+
+    // Telekom-ish neutral palette; adjust to your design system if needed
+    const colors = {
+      ok:      { bar: '#16a34a', label: '#065f46', bg: '#ecfdf5' },   // green
+      warning: { bar: '#f59e0b', label: '#854d0e', bg: '#fffbeb' },   // amber
+      danger:  { bar: '#dc2626', label: '#7f1d1d', bg: '#fef2f2' },   // red
+    }[level];
+
+    return { ...i, thresholdPct: pct, level, ...colors };
+  });
+
 const columns = [
   {
     key: 'tphone',
     label: 'tPhone',
     image: '/tphone.jpg',
-    data: hazerdousData,
+    data: mapHazardItems(hazerdousData),
     longtivityData: longtivityTPhone,
   },
   {
     key: 'redphone',
     label: 'redPhone',
     image: '/vodafone.png',
-    data: hazerdousDataRed,
+    data: mapHazardItems(hazerdousDataRed),
     longtivityData: longtivityRedPhone,
   },
 ];

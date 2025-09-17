@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
+import { Card } from "./card";
 import StatusIcon from "./StatusIcon";
-import type { CardStatus } from "./Card";
+type CardStatus = "success" | "warning" | "danger";
 import type { StatusType } from "./StatusIcon";
 
 interface InfoRowCardProps {

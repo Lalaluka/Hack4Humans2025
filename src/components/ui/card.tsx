@@ -1,37 +1,80 @@
-import React from 'react';
+// src/components/ui/card.tsx
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
-export type CardStatus = 'success' | 'warning' | 'danger';
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("rounded-2xl border bg-background shadow-sm", className)}
+    {...props}
+  />
+));
+Card.displayName = "Card";
 
-interface CardProps {
-  status: CardStatus;
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-}
+const CardHeader = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex flex-col space-y-1.5 p-5", className)}
+    {...props}
+  />
+));
+CardHeader.displayName = "CardHeader";
 
-const statusStyles: Record<CardStatus, { bg: string; border: string }> = {
-  success: { bg: '#f6fff6', border: '#b6e6a3' },
-  warning: { bg: '#fffbe6', border: '#ffe58f' },
-  danger: { bg: '#fff6f6', border: '#fbb6b6' },
+const CardTitle = React.forwardRef<
+  HTMLHeadingElement,
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+  <h3
+    ref={ref}
+    className={cn("font-semibold leading-none tracking-tight", className)}
+    {...props}
+  />
+));
+CardTitle.displayName = "CardTitle";
+
+const CardDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <p
+    ref={ref}
+    className={cn("text-sm text-muted-foreground", className)}
+    {...props}
+  />
+));
+CardDescription.displayName = "CardDescription";
+
+const CardContent = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("p-5", className)} {...props} />
+));
+CardContent.displayName = "CardContent";
+
+const CardFooter = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center p-5 pt-0", className)}
+    {...props}
+  />
+));
+CardFooter.displayName = "CardFooter";
+
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
 };
-
-const Card: React.FC<CardProps> = ({ status, children, style }) => {
-  const { bg, border } = statusStyles[status];
-  return (
-    <div
-      style={{
-        borderRadius: 8,
-        background: bg,
-        border: `1px solid ${border}`,
-        boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
-        width: 500,
-        margin: '0 auto',
-        marginBottom: 10,
-        ...style,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
-export default Card;
