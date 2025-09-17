@@ -1,0 +1,24 @@
+{
+  "clusters": [
+    {
+      "topic": "Own Workforce",
+      "description": "Impacts and issues related to the company’s own employees.",
+      "esrs_extract": ""
+    },
+    {
+      "topic": "Workers in the Value Chain",
+      "description": "Social impacts affecting workers in suppliers and partners outside the company.",
+      "esrs_extract": ""
+    },
+    {
+      "topic": "Affected Communities",
+      "description": "Effects on people and communities living near or impacted by operations.",
+      "esrs_extract": ""
+    },
+    {
+      "topic": "Consumers & End-Users",
+      "description": "How products or services affect the people who use them or depend on them.",
+      "esrs_extract": ""
+    }
+  ]
+}
