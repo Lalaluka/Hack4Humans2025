@@ -39,7 +39,7 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
         }}
         onClick={() => setOpen((v) => !v)}
       >
-        <span style={{ color: "#222" }}>Langlebigkeit</span>
+        <span style={{ color: "#222" }}>Longevity</span>
         <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
           {status === "success" ? (
             <svg
@@ -107,7 +107,7 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
           }}
         >
           <InfoRowCard
-            title="Energieeffizienz"
+            title="Energy Efficiency"
             details={
               <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                 <span
@@ -128,7 +128,7 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
                 >
                   {efficiencyClass}
                 </span>
-                <span>Energieeffizienzklasse: {efficiencyClass}</span>
+                <span>Energy Efficiency Class: {efficiencyClass}</span>
               </div>
             }
             status={status}
@@ -138,14 +138,15 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
           {/* Battery subpoint */}
           {longtivityData?.energy?.battery && (
             <InfoRowCard
-              title="Batterie"
+              title="Battery"
               details={
                 <>
-                  Kapazität: {longtivityData.energy.battery.capacity_mAh} mAh
+                  Capacity: {longtivityData.energy.battery.capacity_mAh} mAh
                   <br />
-                  Lebensdauer pro Zyklus:{" "}
+                  Lifetime per cycle:{" "}
                   {longtivityData.energy.battery.lifetimePerCycle_h} h<br />
-                  Lebenszyklen: {longtivityData.energy.battery.lifetimeCycles}
+                  Lifetime cycles:{" "}
+                  {longtivityData.energy.battery.lifetimeCycles}
                 </>
               }
               status="success"
@@ -156,10 +157,10 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
           {/* Water resistance subpoint */}
           {longtivityData?.reliability?.waterResistance_m && (
             <InfoRowCard
-              title="Wasserresistenz"
+              title="Water Resistance"
               details={
                 <>
-                  Wasserresistenz:{" "}
+                  Water resistance:{" "}
                   {longtivityData.reliability.waterResistance_m} m
                 </>
               }
@@ -172,10 +173,10 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
           {typeof longtivityData?.energy?.userReplaceableBattery ===
             "boolean" && (
             <InfoRowCard
-              title="Batterie austauschbar"
+              title="User Replaceable Battery"
               details={
                 <>
-                  {longtivityData.energy.userReplaceableBattery ? "Ja" : "Nein"}
+                  {longtivityData.energy.userReplaceableBattery ? "Yes" : "No"}
                 </>
               }
               status={
@@ -194,12 +195,12 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
           {/* Reliability subpoint */}
           {longtivityData?.reliability?.dropTest?.class && (
             <InfoRowCard
-              title="Robustheit"
+              title="Durability"
               details={
                 <>
-                  Falltest-Klasse: {longtivityData.reliability.dropTest.class}
+                  Drop Test Class: {longtivityData.reliability.dropTest.class}
                   <br />
-                  Freier Fall ohne Schaden:{" "}
+                  Free fall without damage:{" "}
                   {longtivityData.reliability.dropTest.freeFall_noDamage}
                 </>
               }
@@ -231,11 +232,11 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
           {/* Repairability subpoint */}
           {longtivityData?.repairability?.class && (
             <InfoRowCard
-              title="Reparierbarkeit"
+              title="Repairability"
               details={
                 <>
-                  Klasse: {longtivityData.repairability.class} <br />
-                  Garantierte Updates (Jahre):{" "}
+                  Class: {longtivityData.repairability.class} <br />
+                  Guaranteed updates (years):{" "}
                   {longtivityData.repairability.guaranteedUpdates_years} <br />
                   Index: {longtivityData.repairability.index}
                 </>
@@ -260,9 +261,9 @@ const LongtivitySection: React.FC<LongtivitySectionProps> = ({
           {/* Warranty duration subpoint */}
           {longtivityData?.warranty?.duration_months && (
             <InfoRowCard
-              title="Garantie"
+              title="Warranty"
               details={
-                <>Garantie: {longtivityData.warranty.duration_months} Monate</>
+                <>Warranty: {longtivityData.warranty.duration_months} Monate</>
               }
               status="success"
               iconStatus="success"

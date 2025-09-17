@@ -31,7 +31,7 @@ export default function SidebarLayout({
                   <SidebarMenuButton asChild>
                     <a href="/">
                       <Home className="mr-2 h-4 w-4" />
-                      Startseite
+                      Home
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -39,7 +39,7 @@ export default function SidebarLayout({
                   <SidebarMenuButton asChild>
                     <a href="/scanner">
                       <ScanBarcode className="mr-2 h-4 w-4" />
-                      Productscanner
+                      Scanner
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -47,7 +47,7 @@ export default function SidebarLayout({
                   <SidebarMenuButton asChild>
                     <a href="/comparison">
                       <ChartColumn className="mr-2 h-4 w-4" />
-                      Produktvergleich
+                      Comparison
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
